@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
 
   getData(){
-    this.http.get<any>("/api/getItems").subscribe(data => {
+    this.http.get<any>(this.url).subscribe(data => {
       console.log(data);
       this.data = data.productDetails;
       this.data.forEach((item, index) => {
